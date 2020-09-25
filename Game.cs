@@ -6,10 +6,18 @@ namespace HelloWorld
 {
     class Game
     {
+        public bool _gameOver = false;
         //Run the game
         public void Run()
         {
-            
+            Start();
+
+            while(_gameOver == false)
+            {
+                Update();
+            }
+
+            End();
         }
 
         //Performed once when the game begins
